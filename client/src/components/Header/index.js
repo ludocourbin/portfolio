@@ -7,11 +7,11 @@ import Particles from "../Particles";
 import Navbar from "../Navbar";
 
 import "./styles.scss";
-// <Particles />
 
 const Header = ({ id }) => (
   <div id={id} className="header">
     <Navbar />
+    <Particles />
     <div className="header--content">
       <h1 className="header--content-title">
         Hello ! Je suis Ludovic Courbin 💻 ⚡️

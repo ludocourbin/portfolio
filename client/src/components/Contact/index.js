@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./styles.scss";
 
+import emailjs from "emailjs-com";
+
 const Contact = ({ id }) => {
   // const [name, setName] = useState("");
   // const [email, setEmail] = useState("");
@@ -17,7 +19,7 @@ const Contact = ({ id }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(megaState);
+    // console.log(megaState);
 
     const initialState = {
       name: "",
@@ -35,13 +37,41 @@ const Contact = ({ id }) => {
       return;
     }
 
-    axios
-      .post("http://localhost:3030/api/email", megaState)
-      .then((res) => {
-        console.log(res);
-        if (res.data.success) {
-          console.log(res);
+    // console.log(event.target.from_email);
+
+    // axios
+    //   .post("http://localhost:3030/api/email", megaState)
+    //   .then((res) => {
+    //     console.log(res);
+    //     if (res.data.success) {
+    //       console.log(res);
+    //       console.log("email sent");
+    //       setMegaState({ ...initialState, emailSent: true });
+    //       const interval = setInterval(doStuff, 4000);
+
+    //       function doStuff() {
+    //         setMegaState({ ...initialState, emailSent: false });
+    //         clearInterval(interval);
+    //       }
+    //     } else {
+    //       console.log("could not sent the email");
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_gpbfGRjS",
+        event.target,
+        "user_kSuLjAnY4mY1pMsAvuLR9"
+      )
+      .then(
+        (result) => {
           console.log("email sent");
+          // console.log(event.target.from_email);
+          // console.log(event.target.from_name);
           setMegaState({ ...initialState, emailSent: true });
           const interval = setInterval(doStuff, 4000);
 
@@ -49,13 +79,12 @@ const Contact = ({ id }) => {
             setMegaState({ ...initialState, emailSent: false });
             clearInterval(interval);
           }
-        } else {
-          console.log("could not sent the email");
+          // window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+        },
+        (error) => {
+          console.log(error.text);
         }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      );
   };
 
   return (
@@ -87,7 +116,7 @@ const Contact = ({ id }) => {
                 <form onSubmit={handleSubmit} className="app-form">
                   <div className="app-form-group">
                     <input
-                      name="name"
+                      name="from_name"
                       className="app-form-control"
                       value={megaState.name}
                       placeholder="PRÉNOM"
@@ -98,7 +127,7 @@ const Contact = ({ id }) => {
                   </div>
                   <div className="app-form-group">
                     <input
-                      name="email"
+                      name="from_email"
                       value={megaState.email}
                       className="app-form-control"
                       placeholder="EMAIL"
@@ -115,7 +144,7 @@ const Contact = ({ id }) => {
                     <textarea
                       className="app-form-control"
                       placeholder="MESSAGE"
-                      name="message"
+                      name="message_html"
                       cols="10"
                       rows="4"
                       value={megaState.message}
