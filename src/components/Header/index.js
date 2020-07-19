@@ -16,7 +16,9 @@ const Header = ({ id }) => (
       <h1 className="header--content-title">
         Hello ! Je suis Ludovic Courbin 💻 ⚡️
       </h1>
-      <h2 className="header--content-subtitle">Full stack JS web developer</h2>
+      <h2 className="header--content-subtitle">
+        Développeur web full stack JS
+      </h2>
       <Link
         activeClass="active"
         to="section3"
