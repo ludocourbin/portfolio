@@ -6,8 +6,8 @@ export default [
     créer en utilisant React, Redux, Redux persist, google
     authentification, firebase storage.`,
   },
-  // {
-  //   name: "Okanban",
-  //   description: `Ce website est une représentation du célèbre trello, c'est un projet que nous avons fait avec l'école O'clock mais totalement en autonomie, la dynamisation du site est faite avec une REST Api créer en postgresql héberger sur un serveur Node.js`,
-  // },
+  {
+    name: "Okanban",
+    description: `Ce website est une représentation du célèbre trello, c'est un projet que nous avons fait avec l'école O'clock mais totalement en autonomie, la dynamisation du site est faite avec une REST Api créer en postgresql héberger sur un serveur Node.js`,
+  },
 ];

@@ -1,0 +1,47 @@
+.card- {
+  width: 400px !important;
+  height: 450px !important;
+  position: relative;
+  overflow: hidden;
+  margin: 10px !important;
+
+  &-video-container {
+    width: 100% !important;
+    position: relative;
+
+    & > div {
+      width: 100% !important;
+      min-width: 400px !important;
+      position: relative;
+      top: -70px;
+      overflow: hidden;
+    }
+  }
+  &-content {
+    font-weight: 100;
+    position: relative;
+    top: -110px;
+    font-size: 1em;
+    padding: 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card- {
+    width: 300px !important;
+
+    &-video-container {
+      width: 100% !important;
+      & > div {
+        min-width: 300px !important;
+      }
+    }
+    &-content {
+      font-weight: 100;
+      position: relative;
+      top: -130px;
+      font-size: 1em;
+      padding: 0 10px 10px;
+    }
+  }
+}

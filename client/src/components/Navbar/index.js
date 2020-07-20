@@ -13,24 +13,6 @@ export default class Navbar extends Component {
       <div className="nav" id="navbar">
         <ul className="nav-items">
           <li>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/ludoviccourbin/"
-              className="sns-btn sns-btn--linkedin"
-            >
-              <FaLinkedinIn className="sns-btn__icon" />
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/ludocourbin"
-              className="sns-btn sns-btn--github"
-            >
-              <FaGithub className="sns-btn__icon" />
-            </a>
-          </li>
-          <li>
             <Link
               className="nav-item"
               to="section1"
@@ -77,6 +59,24 @@ export default class Navbar extends Component {
             >
               Contact
             </Link>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/ludoviccourbin/"
+              className="sns-btn sns-btn--linkedin"
+            >
+              <FaLinkedinIn className="sns-btn__icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://github.com/ludocourbin"
+              className="sns-btn sns-btn--github"
+            >
+              <FaGithub className="sns-btn__icon" />
+            </a>
           </li>
         </ul>
       </div>
