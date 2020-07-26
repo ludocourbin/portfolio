@@ -18,6 +18,9 @@
     }
   }
   &-content {
+    & h1 {
+      font-weight: 700;
+    }
     font-weight: 100;
     position: relative;
     top: -110px;
@@ -28,7 +31,8 @@
 
 @media only screen and (max-width: 600px) {
   .card- {
-    width: 400px !important;
+    width: 350px !important;
+    height: 500px !important;
 
     &-video-container {
       width: 100% !important;
@@ -37,6 +41,9 @@
       }
     }
     &-content {
+      & h1 {
+        font-weight: 700;
+      }
       font-weight: 100;
       position: relative;
       top: -110px;
