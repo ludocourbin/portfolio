@@ -18,7 +18,7 @@ import { GrContact } from "react-icons/gr";
 
 // Styles
 import "./styles.scss";
-
+//hello
 const About = ({ id }) => (
   <div id={id} className="about">
     <div className="about--image">
@@ -58,7 +58,7 @@ const About = ({ id }) => (
         <p>
           <span className="about--content-span">
             <FaStar />
-          </span>{" "}
+          </span>
           Je suis actuellement une formation chez O’Clock de 5 mois ou nous
           apprenons HTML, CSS, SQL, JS, Node.JS, Express dont un mois dédié à se
           spécialiser sur React.
@@ -66,11 +66,11 @@ const About = ({ id }) => (
 
         <p>
           <span className="about--content-span">
-            <FaHandsHelping />{" "}
-          </span>{" "}
-          À partir de Septembre à la fin de la fin de la formation, je serai à
-          la recherche d'une opportunité dans ce domaine, en région toulousaine
-          ou dans d’autres régions de France (tout est permis).
+            <FaHandsHelping />
+          </span>
+          À partir de Septembre à la fin de la formation, je serai à la
+          recherche d'une opportunité dans ce domaine, en région toulousaine ou
+          dans d’autres régions de France (tout est permis).
         </p>
         <p>
           <span className="about--content-span">

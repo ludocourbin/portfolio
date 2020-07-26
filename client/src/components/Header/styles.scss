@@ -22,7 +22,6 @@
       z-index: 1000;
       text-align: center;
       color: white;
-      // padding-bottom: 5px;
     }
 
     &-subtitle {
@@ -35,21 +34,17 @@
     }
 
     &-button {
-      padding: 22px;
-      // line-height: 1.1;
-      letter-spacing: 1px;
+      padding: 20px 22px;
+      font-size: 1em;
       margin-top: 15px;
       border-radius: 30px;
       border: none;
       color: #211f1f;
       transition-duration: 0.5s;
-      transform: rotateX(45deg);
       box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.5);
       cursor: pointer;
       &:hover {
-        transform: scale(1.1);
         box-shadow: none;
-        // background-color: #3e3e3e;
         color: #ea1d6f;
       }
     }
@@ -58,9 +53,6 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .header--content-subtitle {
-  }
-
   .header {
     width: 100%;
     height: 100vh;

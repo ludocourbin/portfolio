@@ -1,19 +1,19 @@
 import React from "react";
-import { Card } from "semantic-ui-react";
+import { Card as CardSemantic } from "semantic-ui-react";
 import ReactPlayer from "react-player/lazy";
 
 import "./style.scss";
 
-const CardExampleCardProps = ({ name, description }) => (
-  <Card className="card-">
+const Card = ({ name, description, url }) => (
+  <CardSemantic className="card-">
     <div className="card--video-container" style={{ width: "500px" }}>
-      <ReactPlayer url="https://streamable.com/kh8yxz" />
+      <ReactPlayer url={url} />
       <section className="card--content">
         <h1>{name}</h1>
         <p>{description}</p>
       </section>
     </div>
-  </Card>
+  </CardSemantic>
 );
 
-export default CardExampleCardProps;
+export default Card;

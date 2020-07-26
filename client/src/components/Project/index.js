@@ -11,8 +11,8 @@ const Project = ({ id }) => (
   <div id={id} className="project">
     <h1 className="project-title">Projets</h1>
     <div className="project-content">
-      {Data.map(({ name, description }, index) => (
-        <Card key={index} name={name} description={description} />
+      {Data.map(({ name, description, url }, index) => (
+        <Card key={index} name={name} url={url} description={description} />
       ))}
     </div>
   </div>
