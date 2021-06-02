@@ -62,7 +62,6 @@ export default class Navbar extends Component {
           </li>
           <li>
             <a
-              target="_blank"
               href="https://localhost:3000"
               className="sns-btn sns-btn--linkedin"
             >
