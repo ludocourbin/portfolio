@@ -63,7 +63,7 @@ export default class Navbar extends Component {
           <li>
             <a
               target="_blank"
-              href="https://www.linkedin.com/in/ludoviccourbin/"
+              href="https://localhost:3000"
               className="sns-btn sns-btn--linkedin"
             >
               <FaLinkedinIn className="sns-btn__icon" />
